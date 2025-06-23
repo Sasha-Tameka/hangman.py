@@ -35,13 +35,18 @@ while True:
     
     #Validations
     while True:
-        guess = input("Guess a letter: ").lower()
+        guess = input("\nGuess a letter: ").lower()
+        if not guess.isalpha():
+            print("Invalid input. Please enter a letter (A-Z).")
+        continue
         if len(guess) != 1:
-            print("Invalid guess. Please enter a letter (A-Z only). Try again.""\n--------------------------------------")
-        elif guess in guessed_letters:
+            print("Invalid input. Please enter a single letter.")
+            continue
+        if guess in guessed_letters:
             print("You already guessed that letter. Try again.")
-        else:
-            break
+            continue
+        break   
+
     #End of game
     print("Guessed letters:", ", ".join(guessed_letters))
     print("Tries left:", 6 - tries)
