@@ -33,3 +33,7 @@ while True:
         print("You won! The word was", chosen_word)
         break
     
+    #End of game
+    print("Guessed letters:", ", ".join(guessed_letters))
+    print("Tries left:", 6 - tries)
+    
