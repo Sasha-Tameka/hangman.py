@@ -24,7 +24,7 @@ while True:
                 display[i] = guess
         print("".join(display))
     else:
-        print("Wrong guess. Try again.")
+        print("Wrong guess. Try again.\n--------------------------------------")
         tries += 1
     if tries == 6:
         print("You lost! The word was", chosen_word)
