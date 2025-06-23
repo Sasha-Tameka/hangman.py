@@ -33,6 +33,15 @@ while True:
         print("You won! The word was", chosen_word)
         break
     
+    #Validations
+    while True:
+        guess = input("Guess a letter: ").lower()
+        if len(guess) != 1:
+            print("Invalid guess. Please enter a letter (A-Z only). Try again.""\n--------------------------------------")
+        elif guess in guessed_letters:
+            print("You already guessed that letter. Try again.")
+        else:
+            break
     #End of game
     print("Guessed letters:", ", ".join(guessed_letters))
     print("Tries left:", 6 - tries)
