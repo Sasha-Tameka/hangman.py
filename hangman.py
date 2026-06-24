@@ -1,6 +1,9 @@
 import random
 
-word_list = ["aardvark", "baboon", "camel", "duck", "elephant", "fish", "giraffe", "hippo", "iguana", "jellyfish", "koala", "lion", "monkey", "ostrich", "penguin", "quetzal", "rhinoceros", "sloth", "tiger", "unicorn", "vulture", "wombat", "xerus", "yak", "zebra"]
+# Word lists by difficulty
+easy_words = ["duck", "fish", "lion", "yak", "camel", "koala"]
+medium_words = ["baboon", "iguana", "monkey", "ostrich", "penguin", "sloth", "tiger", "zebra"]
+hard_words = ["aardvark", "elephant", "giraffe", "jellyfish", "quetzal", "rhinoceros", "unicorn", "vulture", "wombat", "xerus"]
 
 chosen_word = random.choice(word_list)
 guessed_letters = []
