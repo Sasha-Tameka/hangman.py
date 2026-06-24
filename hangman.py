@@ -6,10 +6,12 @@ medium_words = ["baboon", "iguana", "monkey", "ostrich", "penguin", "sloth", "ti
 hard_words = ["aardvark", "elephant", "giraffe", "jellyfish", "quetzal", "rhinoceros", "unicorn", "vulture", "wombat", "xerus"]
 
 # Ask for difficulty
-print("Choose a difficulty level:")
-print("1. Easy   (shorter words, 8 tries)")
-print("2. Medium (medium words, 6 tries)")
-print("3. Hard   (longer words, 4 tries)")
+
+def play_game():
+    print("Choose a difficulty level:") 
+    print("1. Easy   (shorter words, 8 tries)")
+    print("2. Medium (medium words, 6 tries)")
+    print("3. Hard   (longer words, 4 tries)")
 
 while True:
     choice = input("Enter 1, 2, or 3: ").strip()
@@ -66,3 +68,17 @@ while True:
 
     print("Guessed letters:", ", ".join(guessed_letters))
     print("Tries left:", max_tries - tries)
+    
+# Main program with replay option
+while True:
+    play_game()
+
+    while True:
+        play_again = input("\nPlay again? (y/n): ").lower().strip()
+        if play_again in ("y", "n"):
+            break
+        print("Invalid input. Please enter 'y' or 'n'.")
+
+    if play_again == "n":
+        print("Thanks for playing! Goodbye.")
+        break   
