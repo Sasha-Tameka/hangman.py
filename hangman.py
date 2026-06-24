@@ -33,7 +33,7 @@ guessed_letters = []
 tries = 0
 display = ['_' for _ in chosen_word]
 
-print("Welcome to Hangman! You have 6 tries to guess the word.")
+print(f"\nWelcome to Hangman! You have {max_tries} tries to guess the word.")
 print("".join(display))
 
 while True:
@@ -57,7 +57,7 @@ while True:
         print("Wrong guess. Try again.\n--------------------------------------")
         tries += 1
 
-    if tries == 6:
+    if tries == max_tries:
         print("You lost! The word was", chosen_word)
         break
     if "_" not in display:
@@ -65,4 +65,4 @@ while True:
         break
 
     print("Guessed letters:", ", ".join(guessed_letters))
-    print("Tries left:", 6 - tries)
+    print("Tries left:", max_tries - tries)
