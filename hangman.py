@@ -5,6 +5,29 @@ easy_words = ["duck", "fish", "lion", "yak", "camel", "koala"]
 medium_words = ["baboon", "iguana", "monkey", "ostrich", "penguin", "sloth", "tiger", "zebra"]
 hard_words = ["aardvark", "elephant", "giraffe", "jellyfish", "quetzal", "rhinoceros", "unicorn", "vulture", "wombat", "xerus"]
 
+# Ask for difficulty
+print("Choose a difficulty level:")
+print("1. Easy   (shorter words, 8 tries)")
+print("2. Medium (medium words, 6 tries)")
+print("3. Hard   (longer words, 4 tries)")
+
+while True:
+    choice = input("Enter 1, 2, or 3: ").strip()
+    if choice == "1":
+        word_list = easy_words
+        max_tries = 8
+        break
+    elif choice == "2":
+        word_list = medium_words
+        max_tries = 6
+        break
+    elif choice == "3":
+        word_list = hard_words
+        max_tries = 4
+        break
+    else:
+        print("Invalid choice. Please enter 1, 2, or 3.")
+
 chosen_word = random.choice(word_list)
 guessed_letters = []
 tries = 0
